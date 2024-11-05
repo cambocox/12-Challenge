@@ -1,3 +1,4 @@
+/* Root container styling */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,11 +6,12 @@
   text-align: center;
 }
 
+/* Logo styling */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
-  transition: filter 300ms;
+  transition: filter 200ms; /* Adjusted transition for quicker response */
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -18,6 +20,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Spinning animation for the logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -27,16 +30,36 @@
   }
 }
 
+/* Applying reduced-motion preference */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* Card styling for layout */
 .card {
   padding: 2em;
+  background-color: #f8f9fa; /* Adding a light background to cards for better separation */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Additional text styling */
 .read-the-docs {
-  color: #888;
+  color: #555; /* Increased contrast for readability */
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem; /* Reduced padding on smaller screens */
+  }
+  .logo {
+    height: 4em; /* Smaller logo for mobile */
+  }
+  .card {
+    padding: 1em; /* Reduced padding for mobile */
+  }
 }
